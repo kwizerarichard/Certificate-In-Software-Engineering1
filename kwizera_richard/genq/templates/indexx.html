@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        
+        
+    </head>
+<body>
+<h1 style="background-color: black; text-align: center; color: white;">GENX KYC FORM.</h1>
+<div style="margin: auto">
+<form action="{% url 'index' %}" id="reg_form" method="POST" enctype="multipart/form-data" style="border: red;">
+    <!-- csrf is a way to tell django that the posted data is within the same application.
+    it is also a security feature against SQL injection -->
+    {% csrf_token %}
+    
+        <!-- all data captured within a form can be accessed in the views 
+        using the name of that field -->
+        <h2>Bio Date</h2>
+        <hr style="border-top: 3px solid black;">
+
+<div class="row">
+    <div class="col form-group">
+        <br>
+        <input placeholder="Enter your First name" name="username" type="text" required>
+        <br> 
+        <input placeholder="Enter your Last Name" name="name" type="text" required> 
+        <br>
+        </div>
+    <div class="col form-group">
+        <input placeholder="Select your Date Of Birth" name="dob" type="date" required>
+        <br>
+        <input placeholder=" Select your Gender" required="gender" type="text"> 
+        <br>
+    </div>
+</div>
+    <h2>Location</h2> 
+        <hr style="border-top: 3px solid black;">
+    <div class="row"> 
+        <div clas="col form-group">   
+        <br>
+        <input placeholder="Select your Country Residence" required="country" type="text"> 
+        <br> 
+        <br>
+        <input placeholder="Enter your Town" required="town" type="text"> 
+        <br>
+        </div>
+    <div class="col form-group">  
+        <br>
+        <input placeholder="Enter State/District here" required="state" type="text"> 
+        <br> 
+         
+        <br>
+        <input placeholder="Zip Code" required="zip_code" type="text"> 
+        <br>
+    </div>
+    </div>
+        
+    <hr style="border-top: 3px solid black;">
+
+        <h2>Contacts and Address</h2>
+    <div class="row">
+        <div class="col">
+        <br>
+        <input placeholder="Phone Number 1" required="phone" type="text"> 
+        <br>
+        </div>    
+    <div class="col"> 
+        <br>
+        <input placeholder="Phone Number 2" required="phone2" type="text"> 
+        <br> 
+        </div>
+        <br>
+        <input placeholder="Enter your Email here" required="email" type="text"> 
+        <br> 
+        <input type="submit" class="button1" title="Signup" id="signupbtn"> 
+    </div>  
+    
+</form>
+</div>
+<style>
+    html,body {
+    position: center;
+    overflow-x: hidden;
+    width: 80% !important;
+    height: 100vh;
+    display: table;
+    position: relative;
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.button1{
+    background-color: orange; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+ 
+  
+  </style>
+</body>
+</html><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        
+        
+    </head>
+<body>
+<h1 style="background-color: black; text-align: center; color: white;">GENX KYC FORM.</h1>
+<div style="margin: auto">
+<form action="{% url 'index' %}" id="reg_form" method="POST" enctype="multipart/form-data">
+    <!-- csrf is a way to tell django that the posted data is within the same application.
+    it is also a security feature against SQL injection -->
+    {% csrf_token %}
+    
+        <!-- all data captured within a form can be accessed in the views 
+        using the name of that field -->
+        <h2>Bio Date</h2>
+        <hr style="border-top: 3px solid black;">
+
+<div class="row">
+    <div class="col form-group">
+        <br>
+        <input placeholder="First name" name="username" type="text" required>
+        <br> 
+        <input placeholder="Last Name" name="name" type="text" required> 
+        <br>
+        </div>
+    <div class="col form-group">
+        <input placeholder="Date Of Birth" name="dob" type="date" required>
+        <br>
+        <input placeholder="Gender" required="gender" type="text"> 
+        <br>
+    </div>
+</div>
+    <h2>Location</h2> 
+        <hr style="border-top: 3px solid black;">
+    <div class="row"> 
+        <div clas="col form-group">   
+        <br>
+        <input placeholder="Country" required="country" type="text"> 
+        <br> 
+        <br>
+        <input placeholder="Town" required="town" type="text"> 
+        <br>
+        </div>
+    <div class="col form-group">  
+        <br>
+        <input placeholder="State/District" required="state" type="text"> 
+        <br> 
+         
+        <br>
+        <input placeholder="Zip Code" required="zip_code" type="text"> 
+        <br>
+    </div>
+    </div>
+        
+    <hr style="border-top: 3px solid black;">
+
+        <h2>Contacts and Address</h2>
+    <div class="row">
+        <div class="col">
+        <br>
+        <input placeholder="Phone Number 1" required="phone" type="text"> 
+        <br>
+        </div>    
+    <div class="col"> 
+        <br>
+        <input placeholder="Phone Number 2" required="phone2" type="text"> 
+        <br> 
+        </div>
+        <br>
+        <input placeholder="Email" required="email" type="text"> 
+        <br> 
+        <input type="submit" class="button1" title="Signup" id="signupbtn"> 
+    </div>  
+    
+</form>
+</div>
+<style>
+    html,body {
+    position: center;
+    overflow-x: hidden;
+    width: 80% !important;
+    height: 100vh;
+    display: table;
+    position: relative;
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.button1{
+    background-color: orange; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+ 
+  
+  </style>
+</body>
+</html>
